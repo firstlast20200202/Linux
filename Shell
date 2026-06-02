@@ -3,3 +3,7 @@ echo -n Hello
 type echo
 
 pwd               //shows the current directory you are in
+
+cat > <file-route> 
+|                        //input contents
+ctrl + D                  //save and quit edit mode
