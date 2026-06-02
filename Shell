@@ -4,6 +4,8 @@ type echo
 
 pwd               //shows the current directory you are in
 
-cat > <file-route> 
+cat > <file-path> 
 |                        //input contents
 ctrl + D                  //save and quit edit mode
+
+touch <file-path.file_name>        //create a file 
