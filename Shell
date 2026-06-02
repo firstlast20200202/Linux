@@ -1,3 +1,5 @@
 echo -n Hello
 
 type echo
+
+pwd               //shows the current directory you are in
