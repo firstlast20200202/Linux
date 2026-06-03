@@ -9,3 +9,9 @@ cat > <file-path>
 ctrl + D                  //save and quit edit mode
 
 touch <file-path.file_name>        //create a file 
+
+
+echo $SHELL
+env
+export OFFICE=blabla
+OFFICE=blabla              //only updates the value in the shell
