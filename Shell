@@ -15,3 +15,8 @@ echo $SHELL
 env
 export OFFICE=blabla
 OFFICE=blabla              //only updates the value in the shell
+
+customise prompt by updating PS1 variable:
+[~]$ PS1="blabla:"
+then it should show:
+blabla: [commands here]
