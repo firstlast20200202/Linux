@@ -4,4 +4,4 @@ Dmesg is a tool to display messages from ring buffer in kernal.
 $ dmesg
 
 udevadm is a management tool for udev.
-$ udevadm monitor
+$ udevadm monitor                            //detects uevents
