@@ -3,3 +3,4 @@ when plug in a USB, the device driver in kernal generates a uevent which is then
 Dmesg is a tool to display messages from ring buffer in kernal.
 
 udevadm is a management tool for udev.
+$ dmesg
