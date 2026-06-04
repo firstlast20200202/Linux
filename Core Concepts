@@ -12,3 +12,11 @@ $ lscpu
 $ lsmem --summary
 $ free -m                                    //total memory vs used memory
 $ sudo lshw                                  //lshw shows hardware configuration
+
+
+Linux Boot stages:
+1. BIOD POST (Power-On-Self-Test): BIOS runs a POST test to ensure hardware components are funtioning correctly
+2. Boot Loader (GRUB2): loads kernel into memory and hands over control
+3. Kernel Initialization: initialize cpu, memory, interrupt handling etc. loads device drivers, mounts root file system, 
+                          starts core kernel subsystems (networking, scheduler, security etc.), launches first user-space process (systemd)
+4. INIT Process (systemd): to check the init system used, run $ ls -l /sbin/init
