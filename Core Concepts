@@ -20,3 +20,12 @@ Linux Boot stages:
 3. Kernel Initialization: initialize cpu, memory, interrupt handling etc. loads device drivers, mounts root file system, 
                           starts core kernel subsystems (networking, scheduler, security etc.), launches first user-space process (systemd)
 4. INIT Process (systemd): to check the init system used, run $ ls -l /sbin/init
+
+
+run levels:
+5 graphical 
+3 non-graphical
+update run levels:
+$ systemctl get-default
+$ ls -ltr /etc/systemd/system/default.target
+$ systemctl set-default multi-user.target                    //update from 5 to 3
