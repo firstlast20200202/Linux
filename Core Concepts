@@ -28,4 +28,4 @@ run levels:
 update run levels:
 $ systemctl get-default
 $ ls -ltr /etc/systemd/system/default.target
-$ systemctl set-default multi-user.target                    //update from 5 to 3
+$ sudo systemctl set-default multi-user.target                    //update from 5 to 3
