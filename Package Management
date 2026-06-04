@@ -1,1 +1,4 @@
-
+types:
+dpkg: for Debian-based distributions
+apt: a newer frontend for dpkg system found in Debian-based distributions such as Ubuntu
+rpm: for redhat distributions such as CentOS
