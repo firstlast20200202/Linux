@@ -1,1 +1,3 @@
 when plug in a USB, the device driver in kernal generates a uevent which is then sent to user-space device manager daemon called udev, then udev creates a device node in /dev.
+
+Dmesg is a tool to display messages from ring buffer in kernal.
