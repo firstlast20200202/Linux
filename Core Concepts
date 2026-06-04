@@ -1,1 +1,1 @@
-
+when plug in a USB, the device driver in kernal generates a uevent which is then sent to user-space device manager daemon called udev.
