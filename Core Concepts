@@ -5,3 +5,10 @@ $ dmesg
 
 udevadm is a management tool for udev.
 $ udevadm monitor                            //detects uevents
+
+$ lspci
+$ lsblk
+$ lscpu
+$ lsmem --summary
+$ free -m                                    //total memory vs used memory
+$ sudo lshw                                  //lshw shows hardware configuration
