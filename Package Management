@@ -2,3 +2,10 @@ types:
 dpkg: for Debian-based distributions
 apt: a newer frontend for dpkg system found in Debian-based distributions such as Ubuntu
 rpm: for redhat distributions such as CentOS
+
+5 modes of rpm:
+1. installation    $ rpm -ivh blabla.rpm
+2. uninstalling    $ rpm -e blabla.rpm
+3. upgrade         $ rpm -Uvh blabla.rpm
+4. query           $ rpm -q blabla.rpm
+5. verifying       $ rpm -Vf <path-to-file>
