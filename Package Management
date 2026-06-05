@@ -17,3 +17,11 @@ $ yum provides <command-name>      //list packages which provide a specific comm
 $ yum remove <package-name>
 $ yum update <package-name>
 $ yum update                      //update all packages
+
+
+5 modes of dpkg:
+1. installation/upgrade          $ dpkg -i bla.deb
+2. uninstalling                  $ dpkg -r bla.deb
+3. list                          $ dpkg -l bla
+4. status                        $ dpkg -s bla
+5. verifying                     $ dpkg -p <path-to-file>
