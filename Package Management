@@ -30,3 +30,7 @@ dpkg doesnt resolve package dependencies, it would be done by apt/apt-get packag
 $ apt update
 $ apt upgrade
 $ apt edit-sources           //opens up /etc/apt/sources.list file
+$ apt install <package-name>
+$ apt remove <package-name>
+$ apt search <package-name>
+$ apt list | grep <package-name>
