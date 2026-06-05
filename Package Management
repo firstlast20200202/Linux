@@ -11,4 +11,9 @@ rpm: for redhat distributions such as CentOS
 5. verifying       $ rpm -Vf <path-to-file>
 
 rpm doesnt resolve package dependencies, it would be done by YUM package manager.
-
+$ yum install <package-name>
+$ yum repolist
+$ yum provides <command-name>      //list packages which provide a specific command
+$ yum remove <package-name>
+$ yum update <package-name>
+$ yum update                      //update all packages
