@@ -9,3 +9,6 @@ rpm: for redhat distributions such as CentOS
 3. upgrade         $ rpm -Uvh blabla.rpm
 4. query           $ rpm -q blabla.rpm
 5. verifying       $ rpm -Vf <path-to-file>
+
+rpm doesnt resolve package dependencies, it would be done by YUM package manager.
+
