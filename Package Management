@@ -25,3 +25,5 @@ $ yum update                      //update all packages
 3. list                          $ dpkg -l bla
 4. status                        $ dpkg -s bla
 5. verifying                     $ dpkg -p <path-to-file>
+
+dpkg doesnt resolve package dependencies, it would be done by apt/apt-get package manager.
