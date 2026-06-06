@@ -7,3 +7,7 @@ $ tar -tf test.tar
 ./file2
 ./file3
 tar -zcf test.tar file2 file2 file3        //compress
+
+3 ways of compressing and uncompressing
+bzip2 test.img           //compress            bunzip2 test.img.bz2          //uncompress
+du -sh test.img.bz2      //verify              du -sh test.img                //verify
