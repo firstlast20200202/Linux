@@ -23,4 +23,28 @@ $ zcat test.txt.bz2
 
 
 search files:
-$ locate file.txt
+$ locate file.txt                                    //this command depends on DB "molocate.db", so make sure to keep it updated
+$ updatedb
+$ find /home/lily -name file.txt                     //find a file named "file.txt" under this folder /home/lily
+
+$ grep word file.txt                         
+$ grep -i word file.txt                              //not case sensitive
+This line inlcudes WORD.                             //output        
+$ grep -r "words here" /home/lily                    //search a word under folder /home/lily
+./sample.txt: This line inlcudes words here.         //output file name and the word searched
+$ grep -V "word" file.txt                            //prints all the lines which dont inlcude "word"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
