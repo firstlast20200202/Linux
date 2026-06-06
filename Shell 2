@@ -9,5 +9,11 @@ $ tar -tf test.tar
 tar -zcf test.tar file2 file2 file3        //compress
 
 3 ways of compressing and uncompressing
-bzip2 test.img           //compress            bunzip2 test.img.bz2          //uncompress
+bzip2 test.img           //compress            bunzip2 test.img.bz2           //uncompress
 du -sh test.img.bz2      //verify              du -sh test.img                //verify
+
+gzip test.img            //compress            gunzip test.img.gz             //uncompress     
+du -sh test.img.gz       //verify              du -sh test.img                //verify
+
+xz test.img              //compress            unxz test.img.xz               //uncompress
+du -sh test.img.xz       //verify              du -sh test.img                //verify
