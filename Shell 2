@@ -17,3 +17,6 @@ $ du -sh test.img.gz       //verify              $ du -sh test.img              
 
 $ xz test.img              //compress            $ unxz test.img.xz               //uncompress
 $ du -sh test.img.xz       //verify              $ du -sh test.img                //verify
+
+read a compressed file without uncompressing it: zcat/bzcat/xzcat
+zcat test.txt.bz2
