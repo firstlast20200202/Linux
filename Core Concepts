@@ -19,7 +19,7 @@ Linux Boot stages:
 2. Boot Loader (GRUB2): loads kernel into memory and hands over control
 3. Kernel Initialization: initialize cpu, memory, interrupt handling etc. loads device drivers, mounts root file system, 
                           starts core kernel subsystems (networking, scheduler, security etc.), launches first user-space process (systemd)
-4. INIT Process (systemd): to check the init system used, run $ ls -l /sbin/init
+4. INIT Process (systemd): (PID=1) to check the init system used, run $ ls -l /sbin/init
 
 
 run levels:
