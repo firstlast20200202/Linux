@@ -1,1 +1,1 @@
-du -sk <file-name.faile-type>        //shows up the size of the file in kb
+ls -lh <file-name.faile-type>        //shows up the size of the file 
