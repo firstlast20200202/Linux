@@ -61,6 +61,38 @@ error msg blabla here in red
 $ cat file 2> /dev/null                      //  /dev/null is null device where you send standard output or standard error when you dont need to store or print them
 
 
+command line pipes:
+$ cat sample.txt
+hello there!
+Nice to see you here!
+
+$ grep Hello sample.txt > file.txt
+$ less file.txt                              //nothing to output, because there's no Hello, there's only hello (lowercase h); less is output in pager
+
+$ grep hello sample.txt | less               the output of "grep hello sample.txt" becomes the standard input of "less" command
+hello there!
+(END)
+
+$ less sample.txt
+hello there!
+Nice to see you here!
+sample.txt (END)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
