@@ -42,7 +42,7 @@ $ echo $SHELL > shell.txt
 $ cat shell.txt
 /bin/bash
 
-$ echo "This is blabla" >> shell.txt                  // >> append the contents at the end of the file rather than overwrite the contents (if use >)
+$ echo "This is blabla" >> shell.txt                 // >> append the contents at the end of the file rather than overwrite the contents (if use >)
 $ cat shell.txt
 /bin/bash
 This is blabla
@@ -52,13 +52,13 @@ $ cat file 2> error.txt                      // 2> sends standard error output s
 $ cat error.txt
 error msg blabla here in red
 
-$ cat file 2>> shell.txt                    // 2>> appends rather than overwrite
+$ cat file 2>> shell.txt                     // 2>> appends rather than overwrite
 $ cat shell.txt
 /bin/bash
 This is blabla
 error msg blabla here in red
 
-$ cat file 2> /dev/null                    //  /dev/null is null device where you send standard output or standard error when you dont need to store or print them
+$ cat file 2> /dev/null                      //  /dev/null is null device where you send standard output or standard error when you dont need to store or print them
 
 
 
