@@ -42,12 +42,13 @@ $ echo $SHELL > file.txt
 $ cat file.txt
 /bin/bash
 
-$ echo "This is blabla" >> file.txt
+$ echo "This is blabla" >> file.txt                  // >> append the contents at the end of the file rather than overwrite the contents (if use >)
 $ cat file.txt
 /bin/bash
 This is blabla
 
-
+standard error redirect:
+cat file 2> error.txt                      // 2> sends standard error output string to the file, 2 is file descriptor of standard error output stream, 1 is file descriptor of standard output
 
 
 
