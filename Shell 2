@@ -36,6 +36,17 @@ $ grep -V "word" file.txt                            //prints all the lines whic
 $ grep -w word file.txt                              //exact search
 
 
+IO redirection:
+standard output redirect: 
+$ echo $SHELL > file.txt
+$ cat file.txt
+/bin/bash
+
+$ echo "This is blabla" >> file.txt
+$ cat file.txt
+/bin/bash
+This is blabla
+
 
 
 
