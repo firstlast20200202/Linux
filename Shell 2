@@ -104,7 +104,8 @@ search "word": /word
 n: find the next "word" in the file
 N: find the previous "word" in the file
 
-
+lastline mode:
+:q! quit without saving
 
 
 
