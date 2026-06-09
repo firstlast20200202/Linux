@@ -93,6 +93,8 @@ $ cat shell.txt
 blabla
 
 
+Q: Read the file /usr/share/man/man1/tail.1.gz and, without extracting it, redirect its contents to a file called /home/bob/pipes
+A: zcat /usr/share/man/man1/tail.1.gz | tee /home/bob/pipes
 
 
 
