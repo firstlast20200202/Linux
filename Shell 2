@@ -98,9 +98,11 @@ A: zcat /usr/share/man/man1/tail.1.gz | tee /home/bob/pipes
 
 
 vi editor:
-undo in command mode (esc from insert mode): press u on keyboard
-
-
+command mode (esc from insert mode):
+undo: press u on keyboard
+search "word": /word      
+n: find the next "word" in the file
+N: find the previous "word" in the file
 
 
 
