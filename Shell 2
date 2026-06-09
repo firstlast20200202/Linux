@@ -97,7 +97,8 @@ Q: Read the file /usr/share/man/man1/tail.1.gz and, without extracting it, redir
 A: zcat /usr/share/man/man1/tail.1.gz | tee /home/bob/pipes
 
 
-
+vi editor:
+undo in command mode (esc from insert mode): press u on keyboard
 
 
 
