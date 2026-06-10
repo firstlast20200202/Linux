@@ -14,3 +14,6 @@ host-2            //it's the actual host name, but other hosts who want to conne
 
 DNS server:
 stores all the host names and matching IP addresses instead of /etc/hosts file
+config the IP address of DNS server in this file /etc/resol.conf
+$ cat /etc/resolv.conf
+nameserver     192.168.1.100
