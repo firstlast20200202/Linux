@@ -22,3 +22,11 @@ if one IP address is set in /etc/hosts file with a host name AA and mapped anoth
 But this order can be changed, people can make it read from DNS server first followed by /etc/hosts, the file to change this order is /etc/nsswitch.conf:
 $ cat /etc/nsswitch.conf
 hosts:   files dns
+
+if ping a server that is not on either list, say www.facebook.com
+either:
+$ cat >> /etc/resolv.conf
+nameserver     192.168.1.100
+nameserver     8.8.8.8
+or in DNS server:
+Forward All to 8.8.8.8
