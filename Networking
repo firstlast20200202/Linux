@@ -62,6 +62,6 @@ $ ip route add 0.0.0.0 via 192.168.2.1                   //enable connection to 
 other commands:
 $ ip a                                                   //aka. ip address: prints out all the network interfaces and their ip addresses of this computer
 
-
+the loopback device is the computer itself, it has an ip address
 
 
