@@ -57,7 +57,7 @@ $ ping 192.168.1.11                                      //the computers can now
 $ route      //prints routing table
 $ ip route add 192.168.2.0/24 via 192.168.1.1            //config from 192.168.1.1
 $ ip route add 192.168.1.0/24 via 192.168.2.1            //config from 192.168.2.1
-
+$ ip route add 0.0.0.0 via 192.168.2.1                   //config access to all the other networks
 
 
 
