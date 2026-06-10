@@ -11,3 +11,6 @@ $ curl http://www.google.com
 if run the command below on the host:
 $ hostname
 host-2            //it's the actual host name, but other hosts who want to connect to this host dont care the actual name, they read the host name from /etc/hosts without judging the truth.
+
+DNS server:
+stores all the host names and matching IP addresses instead of /etc/hosts file
