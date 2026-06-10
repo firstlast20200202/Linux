@@ -50,7 +50,7 @@ switch is used in the same network for different hosts communicating with each o
 within a network:
 $ ip link                                                //to see interfaces for the host which would be used to connect to the switch 192.168.1.0
 eth0: blabla
-$ ip addr add 192.168.1.10/24 dev eth0                   //assign ip address on the same network
+$ ip addr add 192.168.1.10/24 dev eth0                   //assign ip address on the same network temporarily until system restarts, config in /etc/network/interfaces for perminent change
 $ ip addr add 192.168.1.11/24 dev eth0
 $ ping 192.168.1.11                                      //the computers can now communicate with each other through the switch
 
