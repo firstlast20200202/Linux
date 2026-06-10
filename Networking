@@ -17,3 +17,8 @@ stores all the host names and matching IP addresses instead of /etc/hosts file
 config the IP address of DNS server in this file /etc/resol.conf
 $ cat /etc/resolv.conf
 nameserver     192.168.1.100
+
+if one IP address is set in /etc/hosts file with a host name AA and mapped another host name BB in DNS server, the system will read from the file /etc/hosts first. 
+But this order can be changed, people can make it read from DNS server first followed by /etc/hosts, the file to change this order is /etc/nsswitch.conf:
+$ cat /etc/nsswitch.conf
+hosts:   files dns
