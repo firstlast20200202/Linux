@@ -30,3 +30,16 @@ nameserver     192.168.1.100
 nameserver     8.8.8.8
 or in DNS server:
 Forward All to 8.8.8.8
+
+why sometimes urls are different when connecting internally and externally of the company:
+say, if in DNS server it's set like this:
+192.168.1.10        web.mycompany.com
+192.168.1.11        db.mycompany.com
+192.168.1.12        nfs.mycompany.com
+add one more line to the file below:
+$ cat >> /etc/resolv.conf
+nameserver     192.168.1.100
+search         mycompany.com           //this line added
+internally and externally ping a server would be different:
+$ ping web                   //internally
+$ ping web.mycompany.com     //externally
