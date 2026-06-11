@@ -64,4 +64,12 @@ $ ip a                                                   //aka. ip address: prin
 
 the loopback device is the computer itself, it has an ip address
 
+Troubleshoot: assuming 
+$ ip link                                                //check local interface
+$ nslookup <host-name>                                   //check whether it's resolved to a valid ip
+note: nslookup command reaches out to DNS server and requests for the ip address of the host name, it returns the ip of the repo server that host is trying to connect to.
+$ ping <repo-server>
+$ traceroute 192.168.2.5                                 //shows up devices between the source host and the destination repo server (192.168.2.5)
+
+
 
