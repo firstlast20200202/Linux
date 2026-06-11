@@ -72,6 +72,6 @@ note: nslookup command reaches out to DNS server and requests for the ip address
 $ ping <repo-server>
 $ traceroute 192.168.2.5                                 //shows up devices between the source host and the destination repo server (192.168.2.5)
 troubleshoot from repo server:
-[repo-01: ~]$ netstat -an | grep 80 | grep -i LISTEN                 //shows active ports in the system and port 80 is listening on the server
+[repo-01: ~]$ netstat -an | grep 80 | grep -i LISTEN                 //shows active ports in the system and whether port 80 is listening on the server
 [repo-01: ~]$ ip link                                                //shows state DOWN in the case
 [repo-01: ~]$ ip link set dev <interface-name> up                    //set it up
