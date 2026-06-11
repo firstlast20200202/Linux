@@ -70,6 +70,6 @@ $ nslookup <host-name>                                   //check whether it's re
 note: nslookup command reaches out to DNS server and requests for the ip address of the host name, it returns the ip of the repo server that host is trying to connect to.
 $ ping <repo-server>
 $ traceroute 192.168.2.5                                 //shows up devices between the source host and the destination repo server (192.168.2.5)
-
-
-
+[repo-01: ~]$ netstat -an | grep 80 | grep -i LISTEN                 //shows active ports in the system??????????????????where was this command performed? on the host or repo server
+[repo-01: ~]$ ip link                                                //shows state DOWN in the case
+[repo-01: ~]$ ip link set dev <interface-name> up                    //set it up
