@@ -1,1 +1,3 @@
+user account information is stored in /etc/passwd
+group information is stored in /etc/group
 
