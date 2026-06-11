@@ -1,3 +1,55 @@
-user account information is stored in /etc/passwd
+user account information is stored in /etc/passwd, but passwords are hashed stored in another file /etc/shadow.
 group information is stored in /etc/group
+$ grep -i ^bob /etc/passwd
+bob:x:1001:1001::/home/bob:/bin/bash            //output format: USERNAME:PASSWORD:UID:GID:GECOS:HOMEDIR:SHELL  
+//PASSWORD: value x menas that it's stored in shadow file
+//GECOS is a csv format or comma seperated list of user info, optional field
 
+$ grep -i ^bob /etc/shadow          
+bob:fkdgk435294^%&(*^&Sfkjgsdk;fg3495238/7.kdfgsk&^&^&dkfhsdklf:18188:0:99999:7:::    //output format: USERNAME:PASSWORD:LASTCHANGE:MINAGE:MAXAGE:WARN:INACTIVE:EXPDATE
+//LASTCHANGE: the date since the password was last changed, shows number of dates since 00.00.00 UTC 01/01/1970 (Unix Epoch)
+//MINAGE: min days the user has to wait to be able to change the password
+//MAXAGE: max days the user has to change password
+//WARN: the nubmer of days before a password is going to expire that the user should be warned so they can change it
+//INACTIVE: the number of days a password has expired that it should still be accepted before being disabled, optional
+//EXPDATE: Epoch, optional, no value means never expires
+
+$ id                           //provides information of the user
+$ who                          //shows who are currently logged in 
+$ last                         //shows records of all logged in users
+
+switch users with 'sudo':
+only users in /etc/soduers can use 'sudo', and this file can be edited with 'visudo' command.
+set up a nologin shell, so no one can login as a root user directly:
+$ grep -i ^root /etc/passwd
+
+commands:
+as a root user:
+$ useradd bob          //add user bob
+$ passwd bob           //set password for bob
+$ userdel bob
+as bob:
+$ whoami
+$ passwd              //set password
+perform groups:
+$ groupadd -g 1011 groupname        //customise group id as 1011
+$ groupdel groupname
+
+ls command:
+$ ls -ld /home/bob/filename
+d--xrwxrwx 1 bob bob 89 Mar 17 01:35 .    //--x is permission of file owner, rwx is permission of owner's group, next rwx is permission of any other person
+//x is execute permission, which允许bob把文件当程序执行
+//here owner doesnt have read access to the file, and his group does, in this case owner still cant inherit the permissions from the group because Linux read permissions sequentially,
+//so other people in the same group would inherit group permissions regardless of what permissions they are assigned.
+
+modify permissions:
+$ chmod ug+r-x filename        //add r-x to user and group 
+$ chmod o-w filename         //remove rwx from others 
+alternatively: rwx is 421
+$ chmod 660 filename           //add rw- to user and group, remove all permissions from others
+
+change owner for the file:
+$ chown bob:groupname filename
+$ chown bob filename
+$ chgrp groupname filename
+$ sudo chown -R mercury /home/bob/sports            //change owner of the folder sports and recursively the files under it by using -R  (has to be capital, -r doesnt work)
