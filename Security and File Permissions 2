@@ -23,3 +23,6 @@ $ iptables -A INPUT -p tcp -s 172.16.238.187 --dport 22 -j ACCEPT
 $ iptables -L                     //verify
 $ iptables -A INPUT -p tcp --dport 22 -j DROP        //drop the input connection from all servers, and since it reads rules sequentially in the ip table, it would only allows input connection from 172.16.238.187
 $ iptables -I OUTPUT -p tcp -d 172.16.238.100 --dport 443 -j ACCEPT        //-I insert the rule to the top of the table instead of to the bottom
+$ iptables -D OUTPUT 5            //delete the 5th rule in the table
+when DB server responds requests, a rule is not necessarily added to allow output connection from DB server, to validate this, on either server run:
+$ netstat -an | grep 5432
