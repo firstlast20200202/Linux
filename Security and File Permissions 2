@@ -26,3 +26,13 @@ $ iptables -I OUTPUT -p tcp -d 172.16.238.100 --dport 443 -j ACCEPT        //-I 
 $ iptables -D OUTPUT 5            //delete the 5th rule in the table
 when DB server responds requests, a rule is not necessarily added to allow output connection from DB server, to validate this, on either server run:
 $ netstat -an | grep 5432
+
+
+cronjob:
+$ crontab -e             //set a cronjob
+$ crontab -l             //list all the jobs run in cron
+verify cronjobs are run:
+either:
+$ cat <output file>
+or:
+$ tail /var/log/syslog
