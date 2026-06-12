@@ -1,1 +1,5 @@
-
+the project is running in this way:
+when boots Linux, this command is enabled to be run at the background: /usr/bin/project.sh, which starts the application after Postgres DB;
+a service account has been created already which would be used to run the service;
+if the application fails it should auto restarts, Bob sets restart interval 10 seconds which should be disabled;
+application events should be logged, and his Linux boots in graphical mode.
