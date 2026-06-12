@@ -20,3 +20,4 @@ $ sudo iptables -L                //list default rules
 set a rule for the remote server:
 $ iptables -A INPUT -p tcp -s 172.16.238.187 --dport 22 -j ACCEPT
 //-A add rules, -p protocol, -s source followed by the client server, -d destination, -j action to take
+$ iptables -L                     //verify
