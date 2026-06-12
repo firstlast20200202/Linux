@@ -1,0 +1,14 @@
+instead of using username and password every time for using command ssh, generate a key pair in this way:
+step 1:
+$ ssh-keygen -t rsa      
+//in the output it requires to enter passphrase, which is optional; if set, you need to enter it every time 
+//in the output it also shows the file paths where public and private keys are stored
+step 2:
+copy the public key to remote server, to do this, you'll have to input your password at least once
+$ ssh-copy-id bob@remoteserver
+//input password at some point
+//by now public key is stored in a hidden file on remote server /home/bob/.ssh/authorized_keys
+
+scp command: allows you to copy files to the remote server
+$ scp /home/bob/file.tar.gz remoteservername:/home/bob
+$ scp -pr /home/bob/blabla/ remoteservername:/home/bob      //copy a folder to the remote server and preserve the ownership and permission of the source file by -p, -r recursively
