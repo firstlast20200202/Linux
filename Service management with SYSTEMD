@@ -19,6 +19,10 @@ RestartSec=10                             //req 3
 [Install]
 WantedBy graphical.target                 //req 4
 
+then run:
+$ systemctl daemon-reload
+$ systemctl start projectblabla.service
+
 what do you need to run as a service when boots your computer:
 ssh
 kubelet 
