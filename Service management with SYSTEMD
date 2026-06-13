@@ -37,7 +37,7 @@ $ systemctl start docker
 $ systemctl stop docker
 $ systemctl restart docker
 $ systemctl reload docker                             //reload system without interupting curently running functions
-$ systemctl enable docker
+$ systemctl enable docker                             //make the service be enabled when Linux boots
 $ systemctl disable docker
 $ systemctl status docker
 $ systemctl daemon-reload                             //run this command after changing some system manager configuration and makes systemd aware of the change
