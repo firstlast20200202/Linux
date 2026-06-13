@@ -30,3 +30,24 @@ containerd
 postgreSQL
 monitoring agent such as Falco
 web service like nginx
+
+
+systemd tools: systemctl and journalctl (useful for troubleshooting)
+$ systemctl start docker
+$ systemctl stop docker
+$ systemctl restart docker
+$ systemctl reload docker                             //reload system without interupting curently running functions
+$ systemctl enable docker
+$ systemctl disable docker
+$ systemctl status docker
+$ systemctl daemon-reload                             //run this command after changing some system manager configuration and makes systemd aware of the change
+$ systemctl edit projectblabla.service --full         
+$ systemctl get-default
+$ systemctl set-default multi-user.target
+$ systemctl list-units --all
+$ systemctl list-units                                //list the active ones
+
+$ journalctl                                          //prints all logs
+$ journalctl -b                                       //logs from current boot
+$ journalctl -u UNIT                                  //logs for a unit
+$ journalctl -u docker.service                        //docker.service is the example unit name
